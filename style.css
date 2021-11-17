@@ -1,0 +1,69 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #1f232f;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+#speedtest {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  padding: 72px 30px 54px;
+  background: #fff;
+  box-shadow: 0 0px 32px -16px rgba(70, 81, 101, 0.5),
+    0 16px 32px -16px rgba(70, 81, 101, 0.375);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+#speedtest #gauge {
+  width: 100%;
+  box-sizing: border-box;
+}
+#speedtest #gauge rect {
+  width: 8px;
+  height: 64px;
+  transform: translateY(10px);
+  transition: all 0.08s ease-in-out;
+}
+#speedtest #gauge rect.current {
+  height: 100%;
+  transform: translateY(0);
+}
+#speedtest #gauge rect.current ~ rect {
+  fill: #bfcadd !important;
+}
+
+#speedtest #gauge-label {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  font-size: 42px;
+  color: #f4425c;
+}
+
+#speedtest:before,
+#speedtest:after {
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  font-family: inherit;
+  font-size: 14px;
+  color: #8da1c2;
+}
+#speedtest:before {
+  content: "0";
+  left: 28px;
+}
+#speedtest:after {
+  content: "30";
+  right: 28px;
+}
