@@ -14,7 +14,7 @@ function start() {
 function loop() {
   changeCurrentSize();
   changeUI();
-  setTimeout(loop, 15000);
+  setTimeout(loop, 10000);
 }
 
 function changeCurrentSize() {
